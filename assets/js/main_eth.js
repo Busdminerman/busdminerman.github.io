@@ -91,13 +91,13 @@ function refreshData(){
     var baseNum = 0;
     contractBalance(function(result){
         rawStr = numberWithCommas(Number(result).toFixed(3));
-        balanceElem.textContent = stripDecimals(rawStr, 3) + ' Tarot';
+        balanceElem.textContent = stripDecimals(rawStr, 3) + ' Busd';
     });
 
     var userBalanceElem = document.getElementById('user-balance');
     userBalance(function(result){
         rawStr = numberWithCommas(Number(result).toFixed(3));
-        userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' Tarot';
+        userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' Busd';
     });
 
     lastHatch(currentAddr,function(lh){
@@ -190,7 +190,7 @@ function buyEggs2(){
 
     console.log("REF:" + ref);
 
- 
+
 
     if (!web3.utils.isAddress(ref)){
         ref=currentAddr
